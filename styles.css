@@ -1,0 +1,166 @@
+/* 1. General Layout & Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    /* Soft pastel gradient background */
+    background: linear-gradient(135deg, #fff5f8 0%, #f3e5f5 100%);
+    color: #5d4037;
+    min-height: 100vh;
+}
+
+/* 2. Header & Typography */
+header {
+    background-color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid #f8bbd0;
+}
+
+#top h1 {
+    color: #7b1fa2; /* Elegant Deep Purple */
+    text-shadow: 2px 2px 0px #fce4ec; /* Subtle Pink Shadow */
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+h2 {
+    color: #ce93d8; /* Light Lavender */
+    border-bottom: 2px dashed #f8bbd0;
+    padding-bottom: 10px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* 3. Navigation Styling */
+nav {
+    background-color: #fce4ec; /* Soft Pink */
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Descendant Selector for nav links */
+nav a {
+    color: #8e24aa;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #ba68c8;
+    border-radius: 25px;
+}
+
+/* 4. Main Content Box (Box Model) */
+main {
+    width: 85%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #f3e5f5;
+}
+
+/* 5. Lists & Descriptions */
+ul, ol {
+    background-color: #fff9fb;
+    padding: 25px 50px;
+    border-radius: 15px;
+    border: 1px solid #fce4ec;
+    list-style-position: inside;
+}
+
+ul {
+    list-style-type: square;
+}
+
+dl {
+    padding: 20px;
+    background: #fdf2f7;
+    border-left: 5px solid #f8bbd0;
+    border-radius: 0 10px 10px 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #7b1fa2;
+    font-size: 1.1rem;
+}
+
+/* 6. Class Selectors */
+.highlight {
+    background-color: #f3e5f5;
+    color: #ab47bc;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* 7. Image Styling (Creative Touch) */
+figure img {
+    border-radius: 15px;
+    border: 6px solid white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: translateY(-5px);
+}
+
+/* 8. Form Styling (Contact Page) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: 2px solid #f3e5f5;
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #ce93d8;
+}
+
+input[type="submit"] {
+    background-color: #ba68c8;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* 9. Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #f3e5f5;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #8e24aa;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
