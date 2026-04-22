@@ -1,4 +1,4 @@
-// Form Validation
+// ================= FORM VALIDATION =================
 function validateForm() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -8,55 +8,59 @@ function validateForm() {
         return false;
     }
 
-    if (!email.includes("@")) {
-        alert("Enter a valid email.");
-        return false;
-    }
-
     return true;
 }
 
-function toggleDesc(id, btn) {
+
+// ================= PROJECTS TOGGLE =================
+function toggleDescription(id) {
     var desc = document.getElementById(id);
 
     if (desc.style.display === "none") {
         desc.style.display = "block";
-        btn.innerText = "Hide";
     } else {
         desc.style.display = "none";
-        btn.innerText = "Show";
     }
 }
 
-// Add Date to Footer
-function addDate() {
-    var footer = document.getElementById("footer");
+
+// ================= CV EVENTS =================
+function setupBlockquoteEvents() {
+    var block = document.querySelector("blockquote");
+
+    if (block) {
+        block.addEventListener("mouseover", function () {
+            block.style.backgroundColor = "#fce4ec";
+            block.style.fontStyle = "italic";
+        });
+
+        block.addEventListener("mouseout", function () {
+            block.style.backgroundColor = "";
+            block.style.fontStyle = "normal";
+        });
+    }
+}
+
+
+// ================= HOMEPAGE DATE =================
+function addLoadDate() {
+    var footer = document.querySelector("footer");
 
     if (footer) {
         var p = document.createElement("p");
-        var date = new Date();
-        var text = document.createTextNode("Page loaded on: " + date);
+
+        var now = new Date();
+
+        var text = document.createTextNode("Page loaded on: " + now);
 
         p.appendChild(text);
         footer.appendChild(p);
     }
 }
 
+
+// ================= RUN WHEN PAGE LOADS =================
 window.onload = function () {
-
-    var quote = document.getElementById("quote");
-
-    if (quote) {
-        quote.addEventListener("mouseover", function () {
-            quote.style.backgroundColor = "#f3e5f5";
-            quote.style.fontStyle = "italic";
-        });
-
-        quote.addEventListener("mouseout", function () {
-            quote.style.backgroundColor = "transparent";
-            quote.style.fontStyle = "normal";
-        });
-    }
-
-    addDate();
+    addLoadDate();
+    setupBlockquoteEvents();
 };
